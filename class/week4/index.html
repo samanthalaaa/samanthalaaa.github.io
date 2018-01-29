@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>week 4</title>
+    <title>JavaScript Practice</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -16,43 +17,90 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
     <style media="screen">
-
       .height1{
         height: 100px;
       }
-
       .height2{
-        400px;
+        height: 400px;
       }
-
     </style>
   </head>
-
-
   <body>
-
     <div class="container">
-        <div class="row">
-          <div class="col-md-12 height1 randomColor"> </div>
-        </div>
+      <div class="row">
+        <div class="col-md-12 height1 randomColor">
 
-        <div class="row">
-          <div class="col-md-2 height2 randomColor"> </div>
-          <div class="col-md-8 height2"> </div>
-          <div class="col-md-2 height2 randomColor"></div>
         </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2 height2 randomColor">
 
-        <div class="row">
-          <div class="col-md-12 height1 randomColor"> </div>
         </div>
+        <div class="col-md-8 height2 randomColor">
+
+        </div>
+        <div class="col-md-2 height2 randomColor">
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 height1 randomColor">
+
+        </div>
+      </div>
+
     </div>
-
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+          //  when document is loaded
+        $(document).ready(function() {
+          // this function gets a random color between 0 and 255
+          function getRandomColor() {
+            return Math.floor(Math.random() * 255);
+          }
+          // get all the elements (divs) with class randomColor
+          var randomColor = $(".randomColor");
+          //loop through all elements
+          //for each element change css background color to RGB+ 3 random colors
+          $.each(randomColor, function(index, item) {
+            $(this).css("background-color", "RGB(" + getRandomColor() + "," + getRandomColor() + "," + getRandomColor() + ")");
+          })
+    })
+    </script>
+    <script type="text/javascript">
+      //alert("myJS!"); // name of a function then () to call the function
+      // in this case "my JS!" is called the 'perameter'
+      //in this casae its text, which is always within '' or ""
+
+      console.log("Write to the console.....");
+      // above are built-in functions
+      //we can also desine our own functions
+
+      function myFirstFunction(){ //function definition defining what it does
+        //whatever is in the curly brackets will run when we call the function
+        console.log("Write from inside the funtion.....");
+
+      }
+
+      myFirstFunction();
+      myFirstFunction();
+      myFirstFunction();
+      myFirstFunction();
+      //a function call... the purpose of a function is to do things many times... if you write it 4 times itll write it 4 times. only need to define it once but you can call it as many times as you want
+
+      function myFunctionWithParameter(name){
+        console.log("Hello"+name)
+      }
+
+      myFunctionWithParameter("Samantha");
+      myFunctionWithParameter(" , how are you?");
+
+
+    </script>
   </body>
 </html>
