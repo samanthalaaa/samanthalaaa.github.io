@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>week4</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+
+<style>
+
+.height1{
+  height: 200px;
+}
+
+.height2{
+  height:100px;
+}
+
+.fitHeightWidth{
+  width: 100%;
+  height: 100%;
+}
+.parent{
+  position:relative;
+}
+
+.child{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+}
+
+.flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexSpaceBetween{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flexSpaceAround{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.fit4cols{
+  max-width: 50%;
+}
+
+.fit7cols{
+  max-width: 15%;
+  max-height: 175px;
+}
+
+.fit3cols{
+  max-width: 100%;
+  max-height:175px;
+}
+
+.title{
+  text-align: center;
+  font-size: 75px;
+}
+
+</style>
+
+
+  </head>
+
+  <body>
+
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-12 height2 title">
+          CARTOON CHARACTERS
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3 parent height1 randomColor">
+          <img src="mickey.png" class="child fit4cols" alt="mickey">
+        </div>
+        <div class="col-md-3 parent height1 randomColor">
+          <img src="dora.png" class="child fit4cols" alt="Dora">
+        </div>
+        <div class="col-md-3 parent height1 randomColor">
+          <img src="mario.png" class="child fit4cols" alt="Mario">
+        </div>
+        <div class="col-md-3 parent height1 randomColor">
+          <img src="spongebob.png" class="child fit4cols" alt="spongebob">
+        </div>
+      </div>
+
+      <div class="row randomColor">
+        <div class="col-md-12 height1 flexSpaceBetween">
+          <img src="homer.png" class="fit7cols" alt="homer 1">
+          <img src="homer2.png" class="fit7cols" alt="homer 2">
+          <img src="homer3.png" class="fit7cols" alt="homer 3">
+          <img src="homer4.png" class="fit7cols" alt="homer 4">
+          <img src="homer5.png" class="fit7cols" alt="homer 5">
+          <img src="homer6.png" class="fit7cols" alt="homer 6">
+          <img src="homer7.png" class="fit7cols" alt="homer 7">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4 flex height1 randomColor">
+          <img src="boots.png" class="fit3cols" alt="boots">
+        </div>
+        <div class="col-md-4 flex height1 randomColor">
+          <img src="patrick.png" class="fit3cols" alt="patrick">
+        </div>
+        <div class="col-md-4 flex height1 randomColor">
+          <img src="fred.png" class="fit3cols" alt="fred">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3 flex height1 randomColor">
+          <img src="bugs.png" class="fit4cols" alt="bugs bunny">
+        </div>
+        <div class="col-md-3 flex height1 randomColor">
+          <img src="tweety.png" class="fit4cols" alt="tweety">
+        </div>
+        <div class="col-md-3 flex height1 randomColor">
+          <img src="gary.png" class="fit4cols" alt="gary">
+        </div>
+        <div class="col-md-3 flex height1 randomColor">
+          <img src="bart.png" class="fit4cols" alt="bart">
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+    <script type="text/javascript">
+          //  when document is loaded
+        $(document).ready(function() {
+          // this function gets a random color between 0 and 255
+          function getRandomColor() {
+            return Math.floor(Math.random() * 255);
+          }
+          // get all the elements (divs) with class randomColor
+          var randomColor = $(".randomColor");
+          //loop through all elements
+          //for each element change css background color to RGB+ 3 random colors
+          $.each(randomColor, function(index, item) {
+            $(this).css("background-color", "RGB(" + getRandomColor() + "," + getRandomColor() + "," + getRandomColor() + ")");
+          })
+    })
+    </script>
+
+
+  </body>
+</html>
