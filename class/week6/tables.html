@@ -22,6 +22,10 @@
 @import url('https://fonts.googleapis.com/css?family=Unica+One');
 
 
+body{
+  background-color: lightgrey;
+}
+
 .height1{
   height: 75px;
 }
@@ -44,9 +48,10 @@
   font-family: Unica One;
 }
 
+
 ul{
   height: 75px;
-  background-color: :
+  background-color: lightyellow;
 }
 
 h1{
@@ -54,6 +59,10 @@ h1{
   text-transform: uppercase;
   font-size: 400%;
   font-family: Unica One;
+}
+
+.makeSmaller{
+  height: 330%;
 }
 
 .img{
@@ -73,8 +82,10 @@ h1{
 
   <body>
 
-<img src="friendsLogo.png" alt="friendslogo" class="logo">
-<h1>Character information</h1>
+<header>
+  <img src="friendsLogo.png" alt="friendslogo" class="logo">
+  <h1>Character information</h1>
+</header>
 
     <div class="container">
 
@@ -91,7 +102,7 @@ h1{
       </div>
 
       <div class="row">
-        <div class="col-md-2 height2 randomColor" ></div>
+        <div class="col-md-2 height2" ></div>
         <div class="col-md-8 height2" >
             <table class="table table-hover">
               <tr>
@@ -179,12 +190,17 @@ h1{
 
         </div>
 
-        <div class="col-md-2 height2 randomColor" ></div>
+        <div class="col-md-2 height2" ></div>
 
       </div>
 
       <div class="row">
-        <div class="col-md-12 height1 randomColor" ></div>
+        <div class="col-md-12 height1" >
+            <img src="ad1.png" alt="ad 1">
+            <img class="makeSmaller" src="ad2.png" alt="ad 1">
+            <img src="ad1.png" alt="ad 1">
+
+        </div>
       </div>
 
 
@@ -197,27 +213,5 @@ h1{
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-
-    <script>
-        type="text/javascript">
-
-          //when the document is loaded,
-          $(document).ready(function() {
-
-          //this function gets a random color between 0 and 255
-          function getRandomColor() {
-            return Math.floor(Math.random() * 255);
-          }
-
-          //get all the elements (divs) with the class .randomColor
-          var randomColor = $(".randomColor");
-
-          //loop through all elements
-          //for each element, change the css background color to RGB + 3 random colors
-          $.each(randomColor, function(index, item) {
-            $(this).css("background-color", "RGB(" + getRandomColor() + "," + getRandomColor() + "," + getRandomColor() + ")");
-          })
-          })
-    </script>
   </body>
 </html>
