@@ -43,6 +43,12 @@
 
 th, table{
   text-align: center;
+  font-size: 125%
+}
+
+
+th{
+  text-transform: uppercase;;
 }
 
 .flex{
@@ -52,19 +58,41 @@ th, table{
 }
 
 .flex a{
-  color: black;
+  color: white;
   text-transform: uppercase;
   font-size: 28px;
+  letter-spacing: 5px;
 }
 
 h1{
   text-align: center;
   margin: 0 auto;
+  padding-top: 10%;
   width:100%;
-
+  margin-bottom: -6%;
 }
 
+.byline{
+  text-align: center;
+  padding-bottom: 26%;
+  letter-spacing: 3px;
+  font-size: 110%;
+}
 
+.filmRoll{
+margin-left:22%;
+}
+
+.nav{
+  margin-bottom: 5%;
+  background-color: black;
+}
+
+.footer{
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding-top: 2%;
 }
 
 
@@ -79,11 +107,12 @@ h1{
       <div class="row">
         <div class="col-md-12">
             <h1> <img src="img/logo.png" alt="logo"> </h1>
+            <div class="byline">2018 Best Picture Nominees</div>
         </div>
       </div>
 
       <div class="row">
-        <div class="col-md-12 height1">
+        <div class="col-md-12">
           <ul class="nav nav-pills flex">
             <li><a href="#">About </a></li>
             <li><a href="#">Past Winners</a></li>
@@ -95,11 +124,16 @@ h1{
 
       <div class="row">
         <div class="col-md-8 output "></div>
-        <div class="col-md-4 height2"></div>
+        <div class="col-md-4 height2">
+          <img src="img/film.jpg" alt="film" class="filmRoll">
+          <img src="img/film.jpg" alt="film" class="filmRoll">
+          <img src="img/film.jpg" alt="film" class="filmRoll">
+          <img src="img/film.jpg" alt="film" class="filmRoll">
+        </div>
       </div>
 
       <div class="row">
-        <div class="col-md-12 height1 randomColor"></div>
+        <div class="col-md-12 height1 footer"> 2018 all rights reserved</div>
       </div>
 
     </div>
