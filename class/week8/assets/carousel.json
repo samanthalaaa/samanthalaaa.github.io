@@ -1,0 +1,47 @@
+[
+  {
+    "name":"John",
+    "age": 25,
+    "hair": "black",
+    "wearsGlasses": true,
+    "background":"Italian",
+    "isFriendly":true
+  },
+
+  {
+    "name":"Rebecca",
+    "age": 47,
+    "hair": "red",
+    "wearsGlasses": false,
+    "background":"Irish",
+    "isFriendly":true
+  },
+
+  {
+    "name":"Alyssa",
+    "age": 17,
+    "hair": "blonde",
+    "wearsGlasses": true,
+    "background":"Greek",
+    "isFriendly":false
+  },
+
+  {
+    "name":"Stefano",
+    "age": 11,
+    "hair": "brown",
+    "wearsGlasses": false,
+    "background":"Italian",
+    "isFriendly":true
+  },
+
+  {
+    "name":"William",
+    "age": 98,
+    "hair": "white",
+    "wearsGlasses": true,
+    "background":"English",
+    "isFriendly":true
+  }
+
+]
