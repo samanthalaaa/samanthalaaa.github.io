@@ -17,59 +17,120 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style media="screen">
+
+    @import url('https://fonts.googleapis.com/css?family=Lato|Lobster');
+
       body{
         max-width: 100%;
         padding: 10px;
+        font-family: Lobster;
+        background-color: #fef8e8;
+        font-size: 30px;
       }
+
+      #myBtn{
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        font-size: 18px;
+        background-color: #dd5536;
+        color: #fef8e8;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 10px;
+
+      }
+
+      #myBtn:hover{
+        font-size: 25px;
+        display: none;
+        position: fixed;
+        bottom: 15px;
+        right: 25px;
+
+      }
+
+      nav ul{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 4%;
+        margin-bottom: 4%;
+        padding:1%;
+        align-items: center;
+        list-style-type: none;
+        background-color: #dd5536;
+      }
+
+      nav li a{
+        color:#fef8e8;
+      }
+
+      nav a:hover{
+        color: #706357;
+        text-decoration: none;
+      }
+
+
+
+
       h1{
-        text-align: center;
+
       }
       img{
         margin-left: auto;
         margin-right: auto;
         display: block;
-        max-width: 100%;
+        max-width: 70%;
+        margin-bottom: 20px;
       }
+
+      .logo{
+        max-width: 50%;
+      }
+
+
     </style>
 </head>
 <body>
 
 <header>
-  <h1> Samantha's Diner Menu</h1>
+  <h1> <img class="logo" src="logo.PNG" alt="logo"></h1>
 </header>
 
 <nav>
   <ul>
-    <li>Appetizers</li>
-    <li>Soups & Salads</li>
-    <li>Mains</li>
-    <li>Sides</li>
-    <li>Beverages</li>
-    <li>Desserts</li>
+    <li> <a href="#appetizers">Appetizers</a></li>
+    <li> <a href="#soupsAndSalads"> Soups & Salads</a></li>
+    <li> <a href="#mains"> Mains</a></li>
+    <li> <a href="#sides"> Sides</a></li>
+    <li> <a href="#beverages"> Beverages</a></li>
+    <li> <a href="#desserts"> Desserts</a></li>
   </ul>
 </nav>
 
 <!-- Insert Appetizers PNG Mock up Here -->
-<img src="appetizers.png" alt="apps">
+<img id="appetizers" src="appetizers.png" alt="apps">
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
 <!-- Insert Soups and Salads PNG Mock up Here -->
-<img src="soupsAndSalads.png" alt="drinks">
+<img id="soupsAndSalads" src="soupsAndSalads.png" alt="drinks">
 
 
 <!-- Insert Mains PNG Mock up Here -->
-<img src="mains.png" alt="desserts">
+<img id="mains" src="mains.png" alt="desserts">
 
 
 <!-- Insert Sides PNG Mock up Here -->
-<img src="sides.png" alt="sides">
+<img id="sides" src="sides.png" alt="sides">
 
 
 <!-- Insert Beverages PNG Mock up Here -->
-<img src="beverages.png" alt="beverages">
+<img id="beverages" src="beverages.png" alt="beverages">
 
 
 <!-- Insert Desserts PNG Mock up Here -->
-<img src="desserts.png" alt="dessert">
+<img id="desserts" src="desserts.png" alt="dessert">
 
 
 
@@ -77,5 +138,22 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <script>
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
   </body>
 </html>
