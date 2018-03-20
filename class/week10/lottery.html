@@ -19,15 +19,26 @@
     <![endif]-->
     <style media="screen">
 
+    @import url('https://fonts.googleapis.com/css?family=Limelight|Lobster');
+
+
       body{
-        background-color: lightgrey;
+        background-color: #DEDEE3;
+      }
+
+      h1{
+        font-family: "lobster";
+        font-size: 100px;
+        text-align: center;
+        color: lightpink;
+        text-shadow: 1.5px 1.5px .5px white;
       }
 
       .winningTicket, .myTicket{
         display: flex;
         justify-content: space-around;
         align-items: center;
-        margin-top: 2%;
+        margin-top: 1%;
       }
 
       .lotteryBall{
@@ -38,27 +49,34 @@
         text-align: center;
         font-weight: bold;
         font-size: 100px;
-        font-family: sans-serif;
-        background-color: lightblue;
+        font-family: Lobster;
+        background-color: lightpink;
         color: white;
       }
 
       .title{
-        margin-top: 8%;
-        font-size: 30px;
+        margin-top: 4%;
+        font-size: 35px;
         font-weight: bold;
-        text-transform: uppercase;
+        color: darkgrey;
         text-shadow: 2px 2px 1px white;
+        font-family: lobster;
      }
 
       .match{
-        background-color: lightpink;
+        background-color: darkgrey;
+        box-shadow: 0px 0px 25px white;
       }
+
     </style>
   </head>
   <body>
 
+
+    <h1>Samantha's Lottery</h1>
+
     <div class="container">
+
       <div class="row">
         <div class="col-md-3 title">Winning Ticket:</div>
         <div class="col-md-12 winningTicket">
