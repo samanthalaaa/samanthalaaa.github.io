@@ -1,0 +1,40 @@
+{
+  "Sheet1": {
+    "1": {
+      "itemId": 1,
+      "samLavTitle": "apricot",
+      "samLavColour": "orange",
+      "samLavUrl": "samanthalaaa.github.io/class/week11/img/apricot.png"
+    },
+    "2": {
+      "itemId": 2,
+      "samLavTitle": "pear",
+      "samLavColour": "green",
+      "samLavUrl": "samanthalaaa.github.io/class/week11/img/pear.png"
+    },
+    "3": {
+      "itemId": 3,
+      "samLavTitle": "apple",
+      "samLavColour": "red",
+      "samLavUrl": "samanthalaaa.github.io/class/week11/img/apple.png"
+    },
+    "4": {
+      "itemId": 4,
+      "samLavTitle": "kiwi",
+      "samLavColour": "brown",
+      "samLavUrl": "samanthalaaa.github.io/class/week11/img/kiwi.png"
+    },
+    "5": {
+      "itemId": 5,
+      "samLavTitle": "banana",
+      "samLavColour": "yellow",
+      "samLavUrl": "samanthalaaa.github.io/class/week11/img/banana.png"
+    },
+    "6": {
+      "itemId": 6,
+      "samLavTitle": "grapes",
+      "samLavColour": "purple ",
+      "samLavUrl": "samanthalaaa.github.io/class/week11/img/grapes.png"
+    }
+  }
+}
