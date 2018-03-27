@@ -7,6 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cities</title>
   <style media="screen">
+
+  @import url('https://fonts.googleapis.com/css?family=Caveat|Faster+One|Lobster|Permanent+Marker');
+
     .outputArray {
       display: flex;
       justify-content: space-around;
@@ -14,9 +17,15 @@
       flex-wrap: wrap;
     }
 
+    .nameLabel{
+      font-family: "Permanent Marker";
+      font-size: 250%;
+    }
+
     .individualCard { /*spaces out the cards */
-      /* margin-left: 30px;
-      margin-right: 30px; */
+      padding-left: 15px;
+      padding-right: 15px;
+      margin-top: 50px;
     }
 
     .cardInfo {
@@ -28,20 +37,75 @@
       padding: 10px;
     }
 
-    h1{
+    .header{
       text-align: center;
+      font-family: "Permanent Marker";
+      font-size: 400%;
+      padding-top: 5%;
+      padding-bottom: 2%;
+      background-image: url("location.png");
+      background-repeat: no-repeat;
+      background-size:15%;
+      background-position: center;
     }
 
     .nav{
       text-decoration: none;
       display: flex;
-      justify-content: space-around;
-      padding-top: 5%;
-      padding-bottom: 5%;
+      justify-content: flex-start;
+      color: grey;
+      font-family: "Caveat";
+      font-size: 150%;
     }
 
       img{
-        max-width: 300px;
+        width: 300px;
+        opacity: .7;
+      }
+
+      img:hover{
+        opacity: 1;
+        transition: .3s;
+      }
+
+      .population, .country, .language {
+        font-family: "Caveat";
+        font-size: 130%;
+        margin-top: -1%;
+      }
+
+      .language{
+        padding-bottom: 3%;
+      }
+
+      .population{
+        padding-top:3%;
+      }
+
+      li a{
+        color: grey;
+      }
+
+      li a:hover{
+        color: black;
+        background-color: white;
+      }
+
+      .date{
+        display: flex;
+        justify-content: flex-end;
+        font-family: "Caveat";
+        font-size: 160%;
+        color: grey;
+      }
+
+      .footer{
+        margin-top: 5%;
+        font-family: "Caveat";
+        border-top: 1px dashed black;
+        margin-bottom: 5%;
+        padding-top: 1%;
+        font-size: 110%;
       }
 
     }
@@ -63,21 +127,27 @@
   <div class="container">
 
     <div class="row">
-      <div class="col-md-12 header">
-        <h1>Cities</h1>
+      <div class="col-md-6">
+          <ul class="nav">
+            <li><a href="blank">Home</a></li>
+            <li><a href="blank">About Me</a></li>
+            <li><a href="blank">Travel</a></li>
+            <li><a href="blank">Contact</a></li>
+          </ul>
+      </div>
+      <div class="col-md-6 date">
+        March 26, 2016
       </div>
     </div>
 
     <div class="row">
-      <div class="col-md-12">
-          <ul class="nav">
-            <li>Home</li>
-            <li>About</li>
-            <li>Travel</li>
-            <li>Contact</li>
-          </ul>
+      <div class="col-md-12 header">
+        Places I've Travelled to
+
       </div>
     </div>
+
+
 
     <div class="row">
       <div class="col-md-12 cardSection">
@@ -85,6 +155,12 @@
       <div class="col-md-12">
         <div class="outputArray">
         </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12 footer">
+          Created by Samantha La Verde
       </div>
     </div>
 
@@ -101,55 +177,49 @@
       var arrayTopic = [{ //Change arrayTopic to whatever topic your group chose in class
           "name": "Toronto",
           "imgUrl": "https://samanthalaaa.github.io/presentations/week11/img/toronto.png",
-          "population": "2 million",
-          "country": "Canada",
-          "language": "English",
-          "button": "More Info" //if u wish to do buttons
+          "population": "2 million people",
+          "country": "City in Canada",
+          "language": "They speak English",
         },
 
         {
           "name": "Tokyo",
           "imgUrl": "https://samanthalaaa.github.io/presentations/week11/img/tokyo.jpg",
-          "population": "13 million",
-          "country": "Japan",
-          "language": "Japanese",
-          "button": "More Info" //if u wish to do buttons
+          "population": "13 million people ",
+          "country": "City in Japan",
+          "language": "They speak Japanese",
         },
 
         {
           "name": "Paris",
           "imgUrl": "https://samanthalaaa.github.io/presentations/week11/img/paris.jpg",
-          "population": "2 million",
-          "country": "France",
-          "language": "French",
-          "button": "More Info" //if u wish to do buttons
+          "population": "2 million people",
+          "country": "City in France",
+          "language": "They speak French",
         },
 
         {
           "name": "Amsterdam",
           "imgUrl": "https://samanthalaaa.github.io/presentations/week11/img/Amsterdam.jpg",
-          "population": "850 thousand",
-          "country": "Netherlands",
-          "language": "Dutch",
-          "button": "More Info" //if u wish to do buttons
+          "population": "850 thousand people",
+          "country": "City in the Netherlands",
+          "language": "They speak Dutch",
         },
 
         {
           "name": "Rome",
           "imgUrl": "https://samanthalaaa.github.io/presentations/week11/img/rome.jpg",
-          "population": "2.8 million",
-          "country": "Italy",
-          "language": "Italian",
-          "button": "More Info" //if u wish to do buttons
+          "population": "2.8 million people",
+          "country": "City in Italy",
+          "language": "They speak Italian",
         },
 
         {
           "name": "Los Angeles",
           "imgUrl": "https://samanthalaaa.github.io/presentations/week11/img/losAngeles.jpg",
           "population": "3.9 million",
-          "country": "USA",
-          "language": "English",
-          "button": "More Info" //if u wish to do buttons
+          "country": "City in the USA",
+          "language": "They speak English",
         }
       ];
 
@@ -171,10 +241,9 @@
           //  "<div><img class='img-responsive' src='" + arrayTopic[i].imgUrl + "' /></div>" + //change the red text to the keys in your Array
             "<div class='cardInfo nameLabel'>" + arrayTopic[i].name + "</div>" +
             "<div class='cardInfo ownerLabel'><img src='"+arrayTopic[i].imgUrl+"'></div>" +//change the red text to the keys in your Array
-            "<div class='cardInfo ageLabel'>" + arrayTopic[i].population + "</div>" + //change the red text to the keys in your Array
-            "<div class='cardInfo ownerLabel'>" + arrayTopic[i].country + "</div>" + //change the red text to the keys in your Array
-            "<div class='cardInfo ownerLabel'>" + arrayTopic[i].language + "</div>" + //change the red text to the keys in your Array
-            "<div class='itemButton'><button type='button' class='btn btn-default'>" + arrayTopic[i].button + "</button></div>" + //Button Template
+            "<div class='cardInfo population'>" + arrayTopic[i].population + "</div>" + //change the red text to the keys in your Array
+            "<div class='cardInfo country'>" + arrayTopic[i].country + "</div>" + //change the red text to the keys in your Array
+            "<div class='cardInfo language'>" + arrayTopic[i].language + "</div>" + //change the red text to the keys in your Array
             "</div>";
         }
         $(".outputArray").html(html); //outputs the loop onto the html
