@@ -28,7 +28,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-12 height2 ">
+        <div class="col-md-12 height2">
           <div class="selectContainer flexSpaceAround">
             <div class="selectLabel">
               Choose another product type:
@@ -110,12 +110,14 @@
     function getOptions(){
       var html="";
       var options ={
-        "Samantha": "https://samanthalaaa.github.io/class/week11/samLav.json",
+        "Samantha":"https://samanthalaaa.github.io/class/week11/samLav.json",
         "Anderson 1":"https://andersonguelphjs.github.io/class/week11/myJSON.json",
         "Anderson 2":"https://andersonguelphjs.github.io/class/week11/myJSON2.json",
-        "Kay": "https://kayevans.github.io/class/week11/kayEvaJson.json",
-        "Cal":"https://calvincampos.github.io/class/week11/calCam.json"
-       };
+        "Cal":"https://calvincampos.github.io/class/week11/calCam.json",
+        "Kay":"https://kayevans.github.io/class/week11/kayEvaJson.json",
+
+
+      };
 
       // loop through the object
       for (var key in options){
@@ -123,30 +125,30 @@
       }
 
       $(".selectContainer").find("select").html(html);
-
-
     }
 
+// will contain all the events
     function initEvents(){
-      $(".selectContainer").find("select").on("change", function(){
-        var val = $(this).val();
-        if (val){
-          $.get(val)
-          .done(function(data){
-            console.log("success get select json ");
-            console.dir(data);
-            writeJSONtoDom(data.Sheet1);
-          })
-          .done(function(data){
-            console.log("fail get select json! ");
-            console.dir(data);
-          })
-        }
-      })
+      // do this when user changes the select
+        $(".selectContainer").find("select").on("change", function(){
+          var val = $(this).val();
+          if (val){
+            $.get(val)
+            .done(function(data){
+              console.log("success!");
+              console.dir(data);
+              writeJSONToDOM(data.Sheet1);
+            })
+            .fail(function(data){
+              console.log("fail get select json!");
+              console.dir(data);
+            })
+          }
+
+        })
     }
 
-
-    function writeJSONtoDom(d){
+    function writeJSONToDOM(d){
       // <div data-id="1" class="itemContainer">
       // <div class="proAndTitle">Kira risu</div>
       // <div class="proAndPrice">¥800</div>
@@ -155,37 +157,39 @@
       //   <button type="button" class="buyButton btn-default btn">Buy</button>
       // </div>
       // </div>
-      var html ="";
-      console.log("writeJSONtoDom");
+
+      var html="";
+      console.log("writeJSONToDOM");
       console.dir(d);
-      for(var jsonObj in d){
-        console.log("an object");
-        console.log(d[jsonObj]);
-        html+="<div data-id='1' class='itemContainer'>";
-        //here loop through the keys
+      for (var jsonObj in d){
+        // console.log("an object");
+        // console.log(d[jsonObj]);
+        html+="<div data-id='"+jsonObj+"' class='itemContainer'>";
 
         for (key in d[jsonObj]){
+          var str = String(d[jsonObj][key]);
+
           if (key==="itemId"){
-            continue;
+            continue; // means skip this iteration of loop
           }
-          if (d[jsonObj][key].indexOf("github")!==-1){
-            html+= "<div class='imageContainer'><img src='https://"+d[jsonObj][key]+"'></div>";
+          if (str.indexOf("github")!==-1){
+            //if github text appears in the value (=1 means not found)
+            html+="<div class='imageContainer'><img src='https://"+d[jsonObj][key]+"'></div>";
           }
           else{
-            html+="<div class='"+key+"'>"+d[jsonObj][key]+"</div>"
+            html+="<div class='"+key+"'>"+d[jsonObj][key]+"</div>";
           }
+
         }
 
-        html+= "<div class='buttonContainer'>";
-        html+= "<button type='button' class='buyButton btn-default btn'>Buy</button>";
-        html+= "</div>"
-        html+= "</div>"
-
-
+        html+="<div class='buttonContainer'>";
+        html+="<button type='button' class='buyButton btn-default btn'>Buy</button>";
+        html+="</div>";
+        html+="</div>";
       }
 
+      //loop this here
       $(".output").html(html);
-
     }
 
 
@@ -197,16 +201,6 @@
         $("body").fadeIn("slow");
 
       })
-
-
-
-
-
-
-
-
-
-
 
 
     </script>
