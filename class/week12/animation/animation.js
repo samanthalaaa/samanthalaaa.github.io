@@ -146,6 +146,62 @@ var spriteImages = [{
   },
 
   {
+    "spriteMapUrl":"https://kiannagram.github.io/class/week12/animation/images/ARTZU.png",
+    "numFrames": 7,
+    "width": 2100,
+    "height": 694,
+    "name": "colour goat"
+  },
+
+  {
+    "spriteMapUrl": "https://bill-curne.github.io/class/animation/images/heisenberg.png",
+    "numFrames": 10,
+    "width": 1300,
+    "height": 130,
+    "name": "heisenberg"
+  },
+
+  {
+    "spriteMapUrl": "https://chell-github.github.io/class/week12/images/masae.png",
+    "numFrames": 29,
+    "width": 2900,
+    "height": 100,
+    "name": "masae"
+  },
+
+  {
+    "spriteMapUrl": "https://jresur01.github.io/class/week12/animation/images/steven.png",
+    "numFrames": 7,
+    "width": 1023,
+    "height": 145,
+    "name": "steven"
+  },
+
+  {
+      "spriteMapUrl":"https://alissavalentina.github.io/class/week12/animation/images/winnie2.png",
+      "numFrames": 10,
+      "width": 919 ,
+      "height": 100,
+      "name":"winnie the pooh"
+    },
+
+    {
+    "spriteMapUrl": "https://kayevans.github.io/class/week12/animation/images/sprite.png",
+    "numFrames": 10,
+    "width": 1000,
+    "height": 193,
+    "name": "can"
+  },
+
+
+
+
+
+
+
+
+
+  {
     "spriteMapUrl": "images/Madoka.png",
     "numFrames": 8,
     "width": 809,
@@ -161,7 +217,7 @@ var spriteImages = [{
   }
 ];
 var animations = []; //an array to hold the currently existing sprite obects
-var maxAnimations = spriteImages.length; //how many animations we want on the screen at any one time
+var maxAnimations = 50; //how many animations we want on the screen at any one time
 
 //begin the program, spawn a bunch of animations and we will hold them in animations array
 for (var i = 0; i < maxAnimations; i++) {
