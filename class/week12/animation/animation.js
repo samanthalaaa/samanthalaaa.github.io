@@ -140,8 +140,8 @@ canvas.height = screen.availHeight;
 var spriteImages = [{
     "spriteMapUrl": "images/spriteSprite.png",
     "numFrames": 10,
-    "width": 1000,
-    "height": 200,
+    "width": 994,
+    "height": 101,
     "name": "sprite"
   },
 
